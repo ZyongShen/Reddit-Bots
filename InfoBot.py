@@ -5,7 +5,9 @@ import os
 import random
 
 reddit = praw.Reddit('bot1')
-subreddit = reddit.subreddit("UConn")
+subR = input("Which subreddit? ")
+subR = str(subR)
+subreddit = reddit.subreddit(subR)
 
 
 for submission in subreddit.hot(limit=5):
